@@ -65,3 +65,35 @@ def _deformable_conv2d_back_prop(op, grad):
     data_grad = deformable_conv2d_grad_op(data, filter, offset, mask, grad, strides, num_groups, deformable_groups, im2col_step, no_bias, pads, data_format, dilations)
     return data_grad # List of 4 Tensor, since we have 4 input
 
+
+if __name__ == '__main__':
+    input = tf.ones(shape=[1, 512, 48, 64])
+    # filter = tf.constant([1. for i in range(27)], shape=[256, 512, 3, 3])
+    min = - math.sqrt(6. / (7. * 7. * 512.))
+    max = math.sqrt(6. / (7. * 7. * 512.))
+    # filter = tf.get_variable(name='weight_conv', shape=[3, 3, 512, 256], initializer=tf.random_uniform_initializer(min, max))
+    #filter = tf.get_variable(name='weight_conv',
+    #                         shape=[5, 5, 512, 256], initializer=tf.ones_initializer)
+    filter = tf.Variable(tf.ones(shape=[5, 5, 512, 256]))
+    filter_deform = tf.transpose(filter, [3, 2, 0, 1])
+
+    offset = tf.constant([0. for i in range(50 * 48 * 64)], shape=[1, 25 * 2, 48, 64])
+    mask = tf.constant([1. for i in range(25*48*64)], shape=[1, 25, 48, 64])
+    result = deformable_conv2d_op(
+        input=input,
+        filter=filter_deform,
+        offset=offset,
+        mask=mask,
+        strides=[1, 1, 1, 1],
+        num_groups=1,
+        deformable_groups=1,
+        im2col_step=1,
+        no_bias=True,
+        padding='SAME',
+        data_format='NCHW',
+        dilations=[1, 1, 1, 1])
+
+    conv2d = tf.nn.conv2d(input, filter, [1, 1, 1, 1], 'SAME', data_format='NCHW')
+    print(result)
+    print(conv2d)
+
