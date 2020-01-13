@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/admin-seu/TempData/sss/ops
+CMAKE_SOURCE_DIR = /home/admin-seu/TempData/sss/custom_ops/deformable_conv2d_ops
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/admin-seu/TempData/sss/ops/build
+CMAKE_BINARY_DIR = /home/admin-seu/TempData/sss/custom_ops/deformable_conv2d_ops/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/admin-seu/TempData/sss/ops/build/CMakeFiles /home/admin-seu/TempData/sss/ops/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/admin-seu/TempData/sss/custom_ops/deformable_conv2d_ops/build/CMakeFiles /home/admin-seu/TempData/sss/custom_ops/deformable_conv2d_ops/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/admin-seu/TempData/sss/ops/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/admin-seu/TempData/sss/custom_ops/deformable_conv2d_ops/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -123,59 +123,59 @@ ops/fast:
 	$(MAKE) -f CMakeFiles/ops.dir/build.make CMakeFiles/ops.dir/build
 .PHONY : ops/fast
 
-deformable_conv2d.o: deformable_conv2d.cc.o
+deformable_conv.o: deformable_conv.cu.o
+
+.PHONY : deformable_conv.o
+
+# target to build an object file
+deformable_conv.cu.o:
+	$(MAKE) -f CMakeFiles/ops.dir/build.make CMakeFiles/ops.dir/deformable_conv.cu.o
+.PHONY : deformable_conv.cu.o
+
+deformable_conv.i: deformable_conv.cu.i
+
+.PHONY : deformable_conv.i
+
+# target to preprocess a source file
+deformable_conv.cu.i:
+	$(MAKE) -f CMakeFiles/ops.dir/build.make CMakeFiles/ops.dir/deformable_conv.cu.i
+.PHONY : deformable_conv.cu.i
+
+deformable_conv.s: deformable_conv.cu.s
+
+.PHONY : deformable_conv.s
+
+# target to generate assembly for a file
+deformable_conv.cu.s:
+	$(MAKE) -f CMakeFiles/ops.dir/build.make CMakeFiles/ops.dir/deformable_conv.cu.s
+.PHONY : deformable_conv.cu.s
+
+deformable_conv2d.o: deformable_conv2d.cpp.o
 
 .PHONY : deformable_conv2d.o
 
 # target to build an object file
-deformable_conv2d.cc.o:
-	$(MAKE) -f CMakeFiles/ops.dir/build.make CMakeFiles/ops.dir/deformable_conv2d.cc.o
-.PHONY : deformable_conv2d.cc.o
+deformable_conv2d.cpp.o:
+	$(MAKE) -f CMakeFiles/ops.dir/build.make CMakeFiles/ops.dir/deformable_conv2d.cpp.o
+.PHONY : deformable_conv2d.cpp.o
 
-deformable_conv2d.i: deformable_conv2d.cc.i
-
-.PHONY : deformable_conv2d.i
-
-# target to preprocess a source file
-deformable_conv2d.cc.i:
-	$(MAKE) -f CMakeFiles/ops.dir/build.make CMakeFiles/ops.dir/deformable_conv2d.cc.i
-.PHONY : deformable_conv2d.cc.i
-
-deformable_conv2d.s: deformable_conv2d.cc.s
-
-.PHONY : deformable_conv2d.s
-
-# target to generate assembly for a file
-deformable_conv2d.cc.s:
-	$(MAKE) -f CMakeFiles/ops.dir/build.make CMakeFiles/ops.dir/deformable_conv2d.cc.s
-.PHONY : deformable_conv2d.cc.s
-
-deformable_conv2d.o: deformable_conv2d.cu.o
-
-.PHONY : deformable_conv2d.o
-
-# target to build an object file
-deformable_conv2d.cu.o:
-	$(MAKE) -f CMakeFiles/ops.dir/build.make CMakeFiles/ops.dir/deformable_conv2d.cu.o
-.PHONY : deformable_conv2d.cu.o
-
-deformable_conv2d.i: deformable_conv2d.cu.i
+deformable_conv2d.i: deformable_conv2d.cpp.i
 
 .PHONY : deformable_conv2d.i
 
 # target to preprocess a source file
-deformable_conv2d.cu.i:
-	$(MAKE) -f CMakeFiles/ops.dir/build.make CMakeFiles/ops.dir/deformable_conv2d.cu.i
-.PHONY : deformable_conv2d.cu.i
+deformable_conv2d.cpp.i:
+	$(MAKE) -f CMakeFiles/ops.dir/build.make CMakeFiles/ops.dir/deformable_conv2d.cpp.i
+.PHONY : deformable_conv2d.cpp.i
 
-deformable_conv2d.s: deformable_conv2d.cu.s
+deformable_conv2d.s: deformable_conv2d.cpp.s
 
 .PHONY : deformable_conv2d.s
 
 # target to generate assembly for a file
-deformable_conv2d.cu.s:
-	$(MAKE) -f CMakeFiles/ops.dir/build.make CMakeFiles/ops.dir/deformable_conv2d.cu.s
-.PHONY : deformable_conv2d.cu.s
+deformable_conv2d.cpp.s:
+	$(MAKE) -f CMakeFiles/ops.dir/build.make CMakeFiles/ops.dir/deformable_conv2d.cpp.s
+.PHONY : deformable_conv2d.cpp.s
 
 # Help Target
 help:
@@ -186,9 +186,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... ops"
 	@echo "... edit_cache"
-	@echo "... deformable_conv2d.o"
-	@echo "... deformable_conv2d.i"
-	@echo "... deformable_conv2d.s"
+	@echo "... deformable_conv.o"
+	@echo "... deformable_conv.i"
+	@echo "... deformable_conv.s"
 	@echo "... deformable_conv2d.o"
 	@echo "... deformable_conv2d.i"
 	@echo "... deformable_conv2d.s"

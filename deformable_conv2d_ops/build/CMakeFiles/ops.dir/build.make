@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/admin-seu/TempData/sss/ops
+CMAKE_SOURCE_DIR = /home/admin-seu/TempData/sss/custom_ops/deformable_conv2d_ops
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/admin-seu/TempData/sss/ops/build
+CMAKE_BINARY_DIR = /home/admin-seu/TempData/sss/custom_ops/deformable_conv2d_ops/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/ops.dir/depend.make
@@ -57,70 +57,70 @@ include CMakeFiles/ops.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/ops.dir/flags.make
 
-CMakeFiles/ops.dir/deformable_conv2d.cc.o: CMakeFiles/ops.dir/flags.make
-CMakeFiles/ops.dir/deformable_conv2d.cc.o: ../deformable_conv2d.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/admin-seu/TempData/sss/ops/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ops.dir/deformable_conv2d.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ops.dir/deformable_conv2d.cc.o -c /home/admin-seu/TempData/sss/ops/deformable_conv2d.cc
+CMakeFiles/ops.dir/deformable_conv2d.cpp.o: CMakeFiles/ops.dir/flags.make
+CMakeFiles/ops.dir/deformable_conv2d.cpp.o: ../deformable_conv2d.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/admin-seu/TempData/sss/custom_ops/deformable_conv2d_ops/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ops.dir/deformable_conv2d.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ops.dir/deformable_conv2d.cpp.o -c /home/admin-seu/TempData/sss/custom_ops/deformable_conv2d_ops/deformable_conv2d.cpp
 
-CMakeFiles/ops.dir/deformable_conv2d.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ops.dir/deformable_conv2d.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/admin-seu/TempData/sss/ops/deformable_conv2d.cc > CMakeFiles/ops.dir/deformable_conv2d.cc.i
+CMakeFiles/ops.dir/deformable_conv2d.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ops.dir/deformable_conv2d.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/admin-seu/TempData/sss/custom_ops/deformable_conv2d_ops/deformable_conv2d.cpp > CMakeFiles/ops.dir/deformable_conv2d.cpp.i
 
-CMakeFiles/ops.dir/deformable_conv2d.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ops.dir/deformable_conv2d.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/admin-seu/TempData/sss/ops/deformable_conv2d.cc -o CMakeFiles/ops.dir/deformable_conv2d.cc.s
+CMakeFiles/ops.dir/deformable_conv2d.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ops.dir/deformable_conv2d.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/admin-seu/TempData/sss/custom_ops/deformable_conv2d_ops/deformable_conv2d.cpp -o CMakeFiles/ops.dir/deformable_conv2d.cpp.s
 
-CMakeFiles/ops.dir/deformable_conv2d.cc.o.requires:
+CMakeFiles/ops.dir/deformable_conv2d.cpp.o.requires:
 
-.PHONY : CMakeFiles/ops.dir/deformable_conv2d.cc.o.requires
+.PHONY : CMakeFiles/ops.dir/deformable_conv2d.cpp.o.requires
 
-CMakeFiles/ops.dir/deformable_conv2d.cc.o.provides: CMakeFiles/ops.dir/deformable_conv2d.cc.o.requires
-	$(MAKE) -f CMakeFiles/ops.dir/build.make CMakeFiles/ops.dir/deformable_conv2d.cc.o.provides.build
-.PHONY : CMakeFiles/ops.dir/deformable_conv2d.cc.o.provides
+CMakeFiles/ops.dir/deformable_conv2d.cpp.o.provides: CMakeFiles/ops.dir/deformable_conv2d.cpp.o.requires
+	$(MAKE) -f CMakeFiles/ops.dir/build.make CMakeFiles/ops.dir/deformable_conv2d.cpp.o.provides.build
+.PHONY : CMakeFiles/ops.dir/deformable_conv2d.cpp.o.provides
 
-CMakeFiles/ops.dir/deformable_conv2d.cc.o.provides.build: CMakeFiles/ops.dir/deformable_conv2d.cc.o
+CMakeFiles/ops.dir/deformable_conv2d.cpp.o.provides.build: CMakeFiles/ops.dir/deformable_conv2d.cpp.o
 
 
-CMakeFiles/ops.dir/deformable_conv2d.cu.o: CMakeFiles/ops.dir/flags.make
-CMakeFiles/ops.dir/deformable_conv2d.cu.o: ../deformable_conv2d.cu
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/admin-seu/TempData/sss/ops/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CUDA object CMakeFiles/ops.dir/deformable_conv2d.cu.o"
-	/usr/local/cuda/bin/nvcc  $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -x cu -c /home/admin-seu/TempData/sss/ops/deformable_conv2d.cu -o CMakeFiles/ops.dir/deformable_conv2d.cu.o
+CMakeFiles/ops.dir/deformable_conv.cu.o: CMakeFiles/ops.dir/flags.make
+CMakeFiles/ops.dir/deformable_conv.cu.o: ../deformable_conv.cu
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/admin-seu/TempData/sss/custom_ops/deformable_conv2d_ops/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CUDA object CMakeFiles/ops.dir/deformable_conv.cu.o"
+	/usr/local/cuda/bin/nvcc  $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -x cu -c /home/admin-seu/TempData/sss/custom_ops/deformable_conv2d_ops/deformable_conv.cu -o CMakeFiles/ops.dir/deformable_conv.cu.o
 
-CMakeFiles/ops.dir/deformable_conv2d.cu.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CUDA source to CMakeFiles/ops.dir/deformable_conv2d.cu.i"
+CMakeFiles/ops.dir/deformable_conv.cu.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CUDA source to CMakeFiles/ops.dir/deformable_conv.cu.i"
 	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_CUDA_CREATE_PREPROCESSED_SOURCE
 
-CMakeFiles/ops.dir/deformable_conv2d.cu.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CUDA source to assembly CMakeFiles/ops.dir/deformable_conv2d.cu.s"
+CMakeFiles/ops.dir/deformable_conv.cu.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CUDA source to assembly CMakeFiles/ops.dir/deformable_conv.cu.s"
 	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_CUDA_CREATE_ASSEMBLY_SOURCE
 
-CMakeFiles/ops.dir/deformable_conv2d.cu.o.requires:
+CMakeFiles/ops.dir/deformable_conv.cu.o.requires:
 
-.PHONY : CMakeFiles/ops.dir/deformable_conv2d.cu.o.requires
+.PHONY : CMakeFiles/ops.dir/deformable_conv.cu.o.requires
 
-CMakeFiles/ops.dir/deformable_conv2d.cu.o.provides: CMakeFiles/ops.dir/deformable_conv2d.cu.o.requires
-	$(MAKE) -f CMakeFiles/ops.dir/build.make CMakeFiles/ops.dir/deformable_conv2d.cu.o.provides.build
-.PHONY : CMakeFiles/ops.dir/deformable_conv2d.cu.o.provides
+CMakeFiles/ops.dir/deformable_conv.cu.o.provides: CMakeFiles/ops.dir/deformable_conv.cu.o.requires
+	$(MAKE) -f CMakeFiles/ops.dir/build.make CMakeFiles/ops.dir/deformable_conv.cu.o.provides.build
+.PHONY : CMakeFiles/ops.dir/deformable_conv.cu.o.provides
 
-CMakeFiles/ops.dir/deformable_conv2d.cu.o.provides.build: CMakeFiles/ops.dir/deformable_conv2d.cu.o
+CMakeFiles/ops.dir/deformable_conv.cu.o.provides.build: CMakeFiles/ops.dir/deformable_conv.cu.o
 
 
 # Object files for target ops
 ops_OBJECTS = \
-"CMakeFiles/ops.dir/deformable_conv2d.cc.o" \
-"CMakeFiles/ops.dir/deformable_conv2d.cu.o"
+"CMakeFiles/ops.dir/deformable_conv2d.cpp.o" \
+"CMakeFiles/ops.dir/deformable_conv.cu.o"
 
 # External object files for target ops
 ops_EXTERNAL_OBJECTS =
 
-CMakeFiles/ops.dir/cmake_device_link.o: CMakeFiles/ops.dir/deformable_conv2d.cc.o
-CMakeFiles/ops.dir/cmake_device_link.o: CMakeFiles/ops.dir/deformable_conv2d.cu.o
+CMakeFiles/ops.dir/cmake_device_link.o: CMakeFiles/ops.dir/deformable_conv2d.cpp.o
+CMakeFiles/ops.dir/cmake_device_link.o: CMakeFiles/ops.dir/deformable_conv.cu.o
 CMakeFiles/ops.dir/cmake_device_link.o: CMakeFiles/ops.dir/build.make
 CMakeFiles/ops.dir/cmake_device_link.o: /usr/local/cuda/lib64/libcudart_static.a
 CMakeFiles/ops.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/librt.so
 CMakeFiles/ops.dir/cmake_device_link.o: /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/libtensorflow_framework.so.2
 CMakeFiles/ops.dir/cmake_device_link.o: CMakeFiles/ops.dir/dlink.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/admin-seu/TempData/sss/ops/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CUDA device code CMakeFiles/ops.dir/cmake_device_link.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/admin-seu/TempData/sss/custom_ops/deformable_conv2d_ops/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CUDA device code CMakeFiles/ops.dir/cmake_device_link.o"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ops.dir/dlink.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -130,21 +130,21 @@ CMakeFiles/ops.dir/build: CMakeFiles/ops.dir/cmake_device_link.o
 
 # Object files for target ops
 ops_OBJECTS = \
-"CMakeFiles/ops.dir/deformable_conv2d.cc.o" \
-"CMakeFiles/ops.dir/deformable_conv2d.cu.o"
+"CMakeFiles/ops.dir/deformable_conv2d.cpp.o" \
+"CMakeFiles/ops.dir/deformable_conv.cu.o"
 
 # External object files for target ops
 ops_EXTERNAL_OBJECTS =
 
-libops.so: CMakeFiles/ops.dir/deformable_conv2d.cc.o
-libops.so: CMakeFiles/ops.dir/deformable_conv2d.cu.o
+libops.so: CMakeFiles/ops.dir/deformable_conv2d.cpp.o
+libops.so: CMakeFiles/ops.dir/deformable_conv.cu.o
 libops.so: CMakeFiles/ops.dir/build.make
 libops.so: /usr/local/cuda/lib64/libcudart_static.a
 libops.so: /usr/lib/x86_64-linux-gnu/librt.so
 libops.so: /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/libtensorflow_framework.so.2
 libops.so: CMakeFiles/ops.dir/cmake_device_link.o
 libops.so: CMakeFiles/ops.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/admin-seu/TempData/sss/ops/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX shared library libops.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/admin-seu/TempData/sss/custom_ops/deformable_conv2d_ops/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX shared library libops.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ops.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -152,8 +152,8 @@ CMakeFiles/ops.dir/build: libops.so
 
 .PHONY : CMakeFiles/ops.dir/build
 
-CMakeFiles/ops.dir/requires: CMakeFiles/ops.dir/deformable_conv2d.cc.o.requires
-CMakeFiles/ops.dir/requires: CMakeFiles/ops.dir/deformable_conv2d.cu.o.requires
+CMakeFiles/ops.dir/requires: CMakeFiles/ops.dir/deformable_conv2d.cpp.o.requires
+CMakeFiles/ops.dir/requires: CMakeFiles/ops.dir/deformable_conv.cu.o.requires
 
 .PHONY : CMakeFiles/ops.dir/requires
 
@@ -162,6 +162,6 @@ CMakeFiles/ops.dir/clean:
 .PHONY : CMakeFiles/ops.dir/clean
 
 CMakeFiles/ops.dir/depend:
-	cd /home/admin-seu/TempData/sss/ops/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/admin-seu/TempData/sss/ops /home/admin-seu/TempData/sss/ops /home/admin-seu/TempData/sss/ops/build /home/admin-seu/TempData/sss/ops/build /home/admin-seu/TempData/sss/ops/build/CMakeFiles/ops.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/admin-seu/TempData/sss/custom_ops/deformable_conv2d_ops/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/admin-seu/TempData/sss/custom_ops/deformable_conv2d_ops /home/admin-seu/TempData/sss/custom_ops/deformable_conv2d_ops /home/admin-seu/TempData/sss/custom_ops/deformable_conv2d_ops/build /home/admin-seu/TempData/sss/custom_ops/deformable_conv2d_ops/build /home/admin-seu/TempData/sss/custom_ops/deformable_conv2d_ops/build/CMakeFiles/ops.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ops.dir/depend
 

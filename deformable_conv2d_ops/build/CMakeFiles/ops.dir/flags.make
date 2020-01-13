@@ -5,13 +5,13 @@
 # compile CXX with /usr/bin/c++
 CUDA_FLAGS = --expt-relaxed-constexpr -O3 -DNDEBUG -Xcompiler=-fPIC  
 
-CUDA_DEFINES = -DEIGEN_USE_THREADS -DGOOGLE_CUDA -Dops_EXPORTS
+CUDA_DEFINES = -DEIGEN_USE_GPU -DEIGEN_USE_THREADS -DGOOGLE_CUDA=1 -Dops_EXPORTS
 
-CUDA_INCLUDES = -I/home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include 
+CUDA_INCLUDES = -I/usr/local/cuda/include -I/home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include 
 
 CXX_FLAGS = -O3 -DNDEBUG -fPIC   -std=gnu++14
 
-CXX_DEFINES = -DEIGEN_USE_THREADS -DGOOGLE_CUDA -Dops_EXPORTS
+CXX_DEFINES = -DEIGEN_USE_GPU -DEIGEN_USE_THREADS -DGOOGLE_CUDA=1 -Dops_EXPORTS
 
-CXX_INCLUDES = -I/home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include 
+CXX_INCLUDES = -I/usr/local/cuda/include -I/home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include 
 

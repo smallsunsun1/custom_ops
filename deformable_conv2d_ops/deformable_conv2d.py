@@ -1,6 +1,7 @@
 import tensorflow as tf
 import os.path as osp
 from tensorflow.python.framework import ops
+import math
 
 filename = osp.join(osp.dirname(__file__), 'deformable_conv2d.so')
 deformable_conv2d_module = tf.load_op_library('./deformable_conv2d.so')
@@ -67,19 +68,20 @@ def _deformable_conv2d_back_prop(op, grad):
 
 
 if __name__ == '__main__':
-    input = tf.ones(shape=[1, 512, 48, 64])
-    # filter = tf.constant([1. for i in range(27)], shape=[256, 512, 3, 3])
-    min = - math.sqrt(6. / (7. * 7. * 512.))
-    max = math.sqrt(6. / (7. * 7. * 512.))
-    # filter = tf.get_variable(name='weight_conv', shape=[3, 3, 512, 256], initializer=tf.random_uniform_initializer(min, max))
-    #filter = tf.get_variable(name='weight_conv',
-    #                         shape=[5, 5, 512, 256], initializer=tf.ones_initializer)
-    filter = tf.Variable(tf.ones(shape=[5, 5, 512, 256]))
+    height = 10
+    width = 5
+    kernel_h = 3
+    kernel_w = 3
+    padding = "SAME"
+    # input = tf.random.uniform(shape=[1, 3, height, width], maxval=10)
+    input = tf.ones(shape=[1, 1, height, width])
+    input_b = tf.pad(input, [[0, 0], [0, 0], [1, 1], [1, 1]])
+    filter = tf.Variable(tf.ones(shape=[kernel_h, kernel_w, 1, 1]))
     filter_deform = tf.transpose(filter, [3, 2, 0, 1])
 
-    offset = tf.constant([0. for i in range(50 * 48 * 64)], shape=[1, 25 * 2, 48, 64])
-    mask = tf.constant([1. for i in range(25*48*64)], shape=[1, 25, 48, 64])
-    result = deformable_conv2d_op(
+    offset = tf.constant([0. for i in range(kernel_h * kernel_w * 2 * height * width)], shape=[1, kernel_h * kernel_w * 2, height, width])
+    mask = tf.constant([1. for i in range(kernel_h * kernel_w * height* width)], shape=[1, kernel_h * kernel_w, height, width])
+    result = deformable_conv2d_module.deformable_conv2d(
         input=input,
         filter=filter_deform,
         offset=offset,
@@ -89,11 +91,22 @@ if __name__ == '__main__':
         deformable_groups=1,
         im2col_step=1,
         no_bias=True,
-        padding='SAME',
+        padding=padding,
+        data_format='NCHW',
+        dilations=[1, 1, 1, 1])
+    result2 = deformable_conv2d_module.deformable_conv2d(
+        input=input_b,
+        filter=filter_deform,
+        offset=offset,
+        mask=mask,
+        strides=[1, 1, 1, 1],
+        num_groups=1,
+        deformable_groups=1,
+        im2col_step=1,
+        no_bias=True,
+        padding="VALID",
         data_format='NCHW',
         dilations=[1, 1, 1, 1])
 
-    conv2d = tf.nn.conv2d(input, filter, [1, 1, 1, 1], 'SAME', data_format='NCHW')
     print(result)
-    print(conv2d)
-
+    print(result2)

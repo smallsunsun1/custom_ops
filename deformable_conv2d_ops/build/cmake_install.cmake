@@ -1,4 +1,4 @@
-# Install script for directory: /home/admin-seu/TempData/sss/ops
+# Install script for directory: /home/admin-seu/TempData/sss/custom_ops/deformable_conv2d_ops
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/admin-seu/TempData/sss/ops/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/admin-seu/TempData/sss/custom_ops/deformable_conv2d_ops/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
