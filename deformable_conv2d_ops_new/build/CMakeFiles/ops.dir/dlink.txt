@@ -1,0 +1,1 @@
+/usr/local/cuda/bin/nvcc   --expt-relaxed-constexpr -O3 -DNDEBUG -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -shared -dlink CMakeFiles/ops.dir/deformable_conv2d.cpp.o CMakeFiles/ops.dir/deformable_conv.cu.o CMakeFiles/ops.dir/deformable_conv.cpp.o -o CMakeFiles/ops.dir/cmake_device_link.o  -L/usr/local/cuda/lib64/stubs  -L/usr/local/cuda/lib64 
