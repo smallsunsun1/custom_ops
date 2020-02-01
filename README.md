@@ -1,6 +1,8 @@
-这个库主要实现了可变形卷积V2的CPU和GPU版本
+这个库主要实现了可变形卷积V2和可变形池化的CPU和GPU版本
 
-目前是在tensorflow2.0-gpu上编译通过
+目前deformable_conv2d_ops_new目录下的实现包含了DeformablePSROIAlign和DeformableConv2D的实现，并对cpu和gpu代码的进行了分离，从而使用分离编译，NVCC编译gpu部分，gcc或者clang编译cpu部分，从而提高在cpu部分代码的performance，推荐使用该目录下的代码
+
+目前是在tensorflow2.0-gpu上编译通过，在tensorflow1.14-gpu略做修改也可以编译通过，后续考虑添加一个支持tensorflow1.14的分支。
 
 如果需要自己编译使用，修改CMakeLists中的${TF_INCLUDE_PATH}变量 和最后target_link_libraries(ops PUBLIC ${CUDA_LIBRARIES} /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/libtensorflow_framework.so.2) 中最后手动给定的lib位置，这里给出的是我编译时用的lib位置，对于你自己使用的tensorflow库你需要修改为你目录下的地址, USE_CUDA默认设置为开启，cmake -DUSE_CUDA=OFF可以关闭对gpu部分的编译。
 
