@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.9)
 
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_BUILD_TYPE Release)
+set(CMAKE_CXX_FLAGS -march=native)
 #set(CMAKE_CUDA_FLAGS "--expt-relaxed-constexpr")
 
 #set(TF_INCLUDE_PATH /Users/sunjiahe/miniconda3/envs/tf2.0/lib/python3.6/site-packages/tensorflow_core/include)
@@ -26,3 +27,4 @@ target_include_directories(ops PUBLIC ${CUDA_INCLUDE_DIRS} ${TF_INCLUDE_PATH})
 message(STATUS ${TF_INCLUDE_PATH})
 #target_link_libraries(ops PRIVATE /Users/sunjiahe/miniconda3/envs/tf2.0/lib/python3.6/site-packages/tensorflow_core/libtensorflow_framework.dylib)
 target_link_libraries(ops PUBLIC ${CUDA_LIBRARIES} /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/libtensorflow_framework.so.2)
+#target_compile_options(ops PUBLIC -march=native)
