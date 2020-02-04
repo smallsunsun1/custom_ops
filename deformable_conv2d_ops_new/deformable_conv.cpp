@@ -18,11 +18,9 @@ Eigen::IndexPair<Eigen::DenseIndex> ContractionDims(bool adj_x, bool adj_y) {
 
 template<typename T>
 void MutexAdd(T *address, T val) {
-  std::atomic<T> head(*address + val);
-  T desired;
-  do {
-    desired = head.load();
-  }while (!head.compare_exchange_weak(*address, desired));
+  static mutex mu;
+  std::lock_guard<mutex> lock(mu);
+  (*address) += val;
 }
 
 
