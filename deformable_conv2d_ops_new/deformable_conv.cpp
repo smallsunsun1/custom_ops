@@ -9,6 +9,8 @@
 
 namespace tensorflow {
 
+using ull = unsigned long long int;
+using uInt = unsigned int;
 typedef Eigen::GpuDevice GPUDevice;
 typedef Eigen::ThreadPoolDevice CPUDevice;
 
@@ -16,11 +18,35 @@ Eigen::IndexPair<Eigen::DenseIndex> ContractionDims(bool adj_x, bool adj_y) {
   return {adj_x ? 0 : 1, adj_y ? 1 : 0};
 }
 
-template<typename T>
-void MutexAdd(T *address, T val) {
-  static mutex mu;
-  std::lock_guard<mutex> lock(mu);
-  (*address) += val;
+//template<typename T>
+//void MutexAdd(T *address, T val) {
+//  static mutex mu;
+//  std::lock_guard<mutex> lock(mu);
+//  (*address) += val;
+//}
+
+void MutexAdd(float *address, float val) {
+  auto *address_as_ull = reinterpret_cast<uInt*>(address);
+  uInt old = *address_as_ull;
+  uInt assumed;
+  float desired;
+  do {
+    assumed = old;
+    desired = *reinterpret_cast<float *>(&assumed) + static_cast<float>(val);
+    old = __sync_val_compare_and_swap(address_as_ull, assumed, *reinterpret_cast<uInt*>(&desired));
+  } while (assumed != old);
+}
+
+void MutexAdd(double *address, double val) {
+  auto *address_as_ull = reinterpret_cast<ull*>(address);
+  ull old = *address_as_ull;
+  ull assumed;
+  double desired;
+  do {
+    assumed = old;
+    desired = *reinterpret_cast<double *>(&assumed) + static_cast<double>(val);
+    old = __sync_val_compare_and_swap(address_as_ull, assumed, *reinterpret_cast<ull *>(&desired));
+  } while (assumed != old);
 }
 
 
