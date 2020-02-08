@@ -399,7 +399,7 @@ struct DeformablePSROIPoolBackwardKernel<GPUDevice, T> {
   void operator()(const GPUDevice &d,
                   const int count,
                   const T *top_diff,
-                  T *top_count,
+                  const T *top_count,
                   const int num_rois,
                   const T spatial_scale,
                   const int channels,

@@ -848,6 +848,12 @@ REGISTER_CPU(double);
     REGISTER_KERNEL_BUILDER(Name("DeformableConv2DBackProp").Device(DEVICE_GPU).TypeConstraint<T>("T"), DeformableConv2DBackPropOp<GPUDevice, T>);
 REGISTER_GPU(float);
 REGISTER_GPU(double);
+#undef REGISTER_GPU
+#define REGISTER_GPU(T)              \
+    REGISTER_KERNEL_BUILDER(Name("DeformablePsroiPool").Device(DEVICE_GPU).TypeConstraint<T>("T"), DeformablePSROIPoolOp<GPUDevice, T>); \
+    REGISTER_KERNEL_BUILDER(Name("DeformablePsroiPoolBackProp").Device(DEVICE_GPU).TypeConstraint<T>("T"), DeformablePSROIPoolBackPropOp<GPUDevice, T>);
+REGISTER_GPU(float);
+REGISTER_GPU(double);
 #endif
 
 }

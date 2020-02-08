@@ -3,7 +3,6 @@
 //
 
 #include "deformable_conv2d.h"
-#include <mutex>
 #include <atomic>
 #include <algorithm>
 
@@ -18,14 +17,7 @@ Eigen::IndexPair<Eigen::DenseIndex> ContractionDims(bool adj_x, bool adj_y) {
   return {adj_x ? 0 : 1, adj_y ? 1 : 0};
 }
 
-//template<typename T>
-//void MutexAdd(T *address, T val) {
-//  static mutex mu;
-//  std::lock_guard<mutex> lock(mu);
-//  (*address) += val;
-//}
-
-void MutexAdd(float *address, float val) {
+void AtomicAdd(float *address, float val) {
   auto *address_as_ull = reinterpret_cast<uInt*>(address);
   uInt old = *address_as_ull;
   uInt assumed;
@@ -37,7 +29,7 @@ void MutexAdd(float *address, float val) {
   } while (assumed != old);
 }
 
-void MutexAdd(double *address, double val) {
+void AtomicAdd(double *address, double val) {
   auto *address_as_ull = reinterpret_cast<ull*>(address);
   ull old = *address_as_ull;
   ull assumed;
@@ -59,7 +51,7 @@ void SwapAxisKernel(const CPUDevice &d, const int n, const int cuda_mem_size, co
                 [min_unit_size, input_data, dim_num, axis_x_dims, axis_y_dims,
                     axis_x, axis_y, cuda_mem_size](int64 start, int64 end) {
                   for (int64 index = start; index < end; index++) {
-                    DType *device_data = new DType[cuda_mem_size];
+                    auto *device_data = new DType[cuda_mem_size];
                     DType *input_data_ptr = input_data + index * cuda_mem_size;
                     for (int j = 0; j < axis_y_dims; j++) {
                       for (int i = 0; i < axis_x_dims; i++) {
@@ -175,10 +167,10 @@ void DeformablePSROIPoolBackwardCpuAccKernel(const CPUDevice &d,
           T q10 = dist_x * (1 - dist_y);
           T q11 = dist_x * dist_y;
           int bottom_index_base = c * height * width;
-          MutexAdd(offset_bottom_data_diff + bottom_index_base + y0 * width + x0, q00 * diff_val);
-          MutexAdd(offset_bottom_data_diff + bottom_index_base + y1 * width + x0, q01 * diff_val);
-          MutexAdd(offset_bottom_data_diff + bottom_index_base + y0 * width + x1, q10 * diff_val);
-          MutexAdd(offset_bottom_data_diff + bottom_index_base + y1 * width + x1, q11 * diff_val);
+          AtomicAdd(offset_bottom_data_diff + bottom_index_base + y0 * width + x0, q00 * diff_val);
+          AtomicAdd(offset_bottom_data_diff + bottom_index_base + y1 * width + x0, q01 * diff_val);
+          AtomicAdd(offset_bottom_data_diff + bottom_index_base + y0 * width + x1, q10 * diff_val);
+          AtomicAdd(offset_bottom_data_diff + bottom_index_base + y1 * width + x1, q11 * diff_val);
 
           if (no_trans) {
             continue;
@@ -192,9 +184,9 @@ void DeformablePSROIPoolBackwardCpuAccKernel(const CPUDevice &d,
           T diff_y = (U11 * dist_x + U01 * (1 - dist_x) - U10 * dist_x - U00 * (1 - dist_x)) * trans_std * diff_val;
           diff_y *= roi_height;
 
-          MutexAdd(bottom_trans_diff + (((n * num_classes + class_id) * 2) * part_size + part_h) * part_size + part_w,
-                   diff_x);
-          MutexAdd(
+          AtomicAdd(bottom_trans_diff + (((n * num_classes + class_id) * 2) * part_size + part_h) * part_size + part_w,
+                    diff_x);
+          AtomicAdd(
               bottom_trans_diff + (((n * num_classes + class_id) * 2 + 1) * part_size + part_h) * part_size + part_w,
               diff_y);
         }
@@ -338,7 +330,7 @@ void DeformableConv2DIm2ColCPUKernel(const CPUDevice &d,
           const DType offset_h = data_offset_ptr[data_offset_h_ptr];
           const DType offset_w = data_offset_ptr[data_offset_w_ptr];
           const DType mask = data_mask_ptr[data_mask_hw_ptr];
-          DType val = static_cast<DType>(0);
+          auto val = static_cast<DType>(0);
           const DType h_im = h_in + i * dilation_h + offset_h;
           const DType w_im = w_in + j * dilation_w + offset_w;
           if (h_im > -1 && w_im > -1 && h_im < height && w_im < width) {
@@ -407,7 +399,7 @@ void DeformableConv2DCol2ImCPUKernel(const CPUDevice &d, const int n,
             int cur_bottom_grad_pos = ((b * channels + c) * height + cur_h + dy) * width + cur_w + dx;
             DType weight =
                 DmcnGetGradientWeight(cur_inv_h_data, cur_inv_w_data, cur_h + dy, cur_w + dx, height, width);
-            MutexAdd(grad_im + cur_bottom_grad_pos, weight * cur_top_grad);
+            AtomicAdd(grad_im + cur_bottom_grad_pos, weight * cur_top_grad);
 //                      *(grad_im + cur_bottom_grad_pos) += weight * cur_top_grad;
           }
         }
@@ -595,7 +587,6 @@ void DeformableConv2DCol2Im<CPUDevice, DType>::operator()(const Eigen::ThreadPoo
                                                           const int32_t deformable_group,
                                                           DType *grad_im) {
   int num_spatial_axes = kernel_shape.size();
-  int im_size = ProdShape(im_shape, 1, im_shape.size());
   int channel_per_deformable_group = im_shape[1] / deformable_group;
   int num_kernels = ProdShape(col_shape, 0, col_shape.size());
   // num_axes should be smaller than block size
@@ -610,7 +601,6 @@ void DeformableConv2DCol2Im<CPUDevice, DType>::operator()(const Eigen::ThreadPoo
           kernel_shape[0], kernel_shape[1], pad[0], pad[1], stride[0], stride[1],
           dilation[0], dilation[1], channel_per_deformable_group,
           col_shape[1], deformable_group, col_shape[2], col_shape[3], grad_im);
-      // MSHADOW_CUDA_POST_KERNEL_CHECK(modulated_deformable_col2im_gpu_kernel);
       break;
     default:LOG(FATAL) << "col2im_nd_gpu does not support computation with "
                        << num_spatial_axes << " spatial axes";
