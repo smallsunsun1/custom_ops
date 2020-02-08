@@ -5,9 +5,10 @@ import tensorflow.keras as keras
 import math
 
 filename = osp.join(osp.dirname(__file__), 'deformable_conv2d.so')
-deformable_conv2d_module = tf.load_op_library('./deformable_conv2d.so')
-deformable_conv2d_op = deformable_conv2d_module.deformable_conv2d
-deformable_conv2d_grad_op = deformable_conv2d_module.deformable_conv2d_back_prop
+custom_ops = tf.load_op_library('./deformable_conv2d.so')
+deformable_conv2d_op = custom_ops.deformable_conv2d
+deformable_conv2d_grad_op = custom_ops.deformable_conv2d_back_prop
+deformable_psroi_pool = custom_ops.deformable_psroi_pool
 
 
 @ops.RegisterGradient("DeformableConv2D")
@@ -129,6 +130,32 @@ class DeformableConv2D(keras.layers.Layer):
         result = tf.transpose(result, [0, 2, 3, 1])
         return result
 
+@ops.RegisterGradient("DeformablePsroiPool")
+def deformable_psroi_pool_backprop(op, *grad):
+    data = op.inputs[0]
+    bbox = op.inputs[1]
+    trans = op.inputs[2]
+    top_count = op.outputs[1]
+    pooled_size = op.get_attr("pooled_size")
+    no_trans = op.get_attr("no_trans")
+    spatial_scale = op.get_attr("spatial_scale")
+    output_dim = op.get_attr("output_dim")
+    group_size = op.get_attr("group_size")
+    part_size = op.get_attr("part_size")
+    sample_per_part = op.get_attr("sample_per_part")
+    trans_std = op.get_attr("trans_std")
+    data_grad = custom_ops.deformable_psroi_pool_back_prop(data, bbox, trans,
+                                                           top_count, grad[0],
+                                                           pooled_size=pooled_size,
+                                                           no_trans=no_trans,
+                                                           spatial_scale=spatial_scale,
+                                                           output_dim=output_dim,
+                                                           group_size=group_size,
+                                                           part_size=part_size,
+                                                           sample_per_part=sample_per_part,
+                                                           trans_std=trans_std)
+    return data_grad
+
 
 if __name__ == '__main__':
     height = 10
@@ -184,4 +211,27 @@ if __name__ == '__main__':
         grad2 = tape.gradient(result4, filter)
         print(grad1)
         print(grad2)
+        featuremap = tf.random.normal(shape=[1, 64, 100, 100])
+        tape.watch(featuremap)
+        rois = tf.convert_to_tensor([[0, 1, 1, 800, 800], [0, 2, 2, 400, 400]], dtype=tf.float32)
+        spatial_scale = 1 / 16
+        group_size = 1
+        pooled_size = 7
+        sample_per_part = 4
+        no_trans = True
+        part_size = 7
+        trans_std = 1
+        offset_t, top_count = custom_ops.deformable_psroi_pool(featuremap, rois,
+                                                               tf.convert_to_tensor(()),
+                                                               pooled_size=pooled_size,
+                                                               no_trans=True,
+                                                               spatial_scale=spatial_scale,
+                                                               output_dim=64,
+                                                               group_size=group_size,
+                                                               part_size=part_size,
+                                                               sample_per_part=sample_per_part,
+                                                               trans_std=trans_std)
+        print(top_count)
+        print(offset_t)
+        print(tape.gradient(offset_t, featuremap))
 
