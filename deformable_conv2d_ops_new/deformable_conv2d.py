@@ -2,7 +2,6 @@ import tensorflow as tf
 import os.path as osp
 from tensorflow.python.framework import ops
 import tensorflow.keras as keras
-import math
 
 filename = osp.join(osp.dirname(__file__), 'deformable_conv2d.so')
 custom_ops = tf.load_op_library('./deformable_conv2d.so')
@@ -114,7 +113,7 @@ class DeformableConv2D(keras.layers.Layer):
         o1, o2, mask = tf.split(weight_info, 3, axis=1)
         offset = tf.concat((o1, o2), axis=1)
         mask = tf.sigmoid(mask)
-        result = deformable_conv2d_module.deformable_conv2d(
+        result = custom_ops.deformable_conv2d(
             input=inputs_data,
             filter=self.filter,
             offset=offset,
@@ -175,7 +174,7 @@ if __name__ == '__main__':
         tape.watch(filter)
         offset = tf.constant([0. for i in range(kernel_h * kernel_w * 2 * height * width)], shape=[1, kernel_h * kernel_w * 2, height, width])
         mask = tf.constant([1. for i in range(kernel_h * kernel_w * height* width)], shape=[1, kernel_h * kernel_w, height, width])
-        result = deformable_conv2d_module.deformable_conv2d(
+        result = custom_ops.deformable_conv2d(
             input=input,
             filter=filter_deform,
             offset=offset,
@@ -188,7 +187,7 @@ if __name__ == '__main__':
             padding=padding,
             data_format='NCHW',
             dilations=[1, 1, 1, 1])
-        result2 = deformable_conv2d_module.deformable_conv2d(
+        result2 = custom_ops.deformable_conv2d(
             input=input_b,
             filter=filter_deform,
             offset=offset,
