@@ -14,6 +14,7 @@ set(CMAKE_TARGET_DEFINITIONS_CUDA
   "EIGEN_USE_GPU"
   "EIGEN_USE_THREADS"
   "GOOGLE_CUDA=1"
+  "_GLIBCXX_USE_CXX11_ABI=0"
   )
 
 # The include file search paths:
@@ -32,6 +33,7 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
   "EIGEN_USE_GPU"
   "EIGEN_USE_THREADS"
   "GOOGLE_CUDA=1"
+  "_GLIBCXX_USE_CXX11_ABI=0"
   )
 
 # The include file search paths:

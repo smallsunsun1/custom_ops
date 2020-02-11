@@ -153,7 +153,7 @@ def deformable_psroi_pool_backprop(op, *grad):
                                                            part_size=part_size,
                                                            sample_per_part=sample_per_part,
                                                            trans_std=trans_std)
-    return data_grad
+    return [data_grad[0], tf.zeros_like(bbox), data_grad[1]]
 
 
 if __name__ == '__main__':
@@ -203,9 +203,10 @@ if __name__ == '__main__':
         deform_conv2d_layer = DeformableConv2D(out_channel, (kernel_w, kernel_h), padding=padding)
         result3 = deform_conv2d_layer(input_trans)
         result4 = tf.nn.conv2d(input_trans, filter, [1, 1, 1, 1], "SAME")
-        print(result)
-        print(result2)
-        print(tf.transpose(result3,[0, 3, 1, 2]))
+        # print(result)
+        # print(result2)
+        # print(tf.transpose(result3,[0, 3, 1, 2]))
+        print(tf.reduce_mean(result2 - tf.transpose(result4, [0, 3, 1, 2])))
         grad1 = tape.gradient(result2, filter)
         grad2 = tape.gradient(result4, filter)
         print(grad1)
@@ -230,7 +231,7 @@ if __name__ == '__main__':
                                                                part_size=part_size,
                                                                sample_per_part=sample_per_part,
                                                                trans_std=trans_std)
-        print(top_count)
-        print(offset_t)
-        print(tape.gradient(offset_t, featuremap))
+        # print(top_count)
+        # print(offset_t)
+        # print(tape.gradient(offset_t, featuremap))
 

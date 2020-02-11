@@ -90,10 +90,8 @@ CMakeFiles/ops.dir/deformable_conv.cu.o
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/Eigen/src/Core/arch/Default/ConjHelper.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/Eigen/src/Core/arch/Default/GenericPacketMathFunctions.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/Eigen/src/Core/arch/Default/Settings.h
- /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/Eigen/src/Core/arch/GPU/Half.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/Eigen/src/Core/arch/GPU/MathFunctions.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/Eigen/src/Core/arch/GPU/PacketMath.h
- /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/Eigen/src/Core/arch/GPU/PacketMathHalf.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/Eigen/src/Core/arch/GPU/TypeCasting.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/Eigen/src/Core/arch/HIP/hcc/math_constants.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/Eigen/src/Core/arch/MSA/Complex.h
@@ -367,7 +365,6 @@ CMakeFiles/ops.dir/deformable_conv.cu.o
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/tensorflow/core/platform/default/mutex.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/tensorflow/core/platform/default/mutex_data.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/tensorflow/core/platform/default/notification.h
- /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/tensorflow/core/platform/default/thread_annotations.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/tensorflow/core/platform/dynamic_annotations.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/tensorflow/core/platform/env.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/tensorflow/core/platform/env_time.h
@@ -389,8 +386,6 @@ CMakeFiles/ops.dir/deformable_conv.cu.o
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/tensorflow/core/platform/thread_annotations.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/tensorflow/core/platform/tstring.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/tensorflow/core/platform/types.h
- /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/tensorflow/core/platform/windows/cpu_info.h
- /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/tensorflow/core/platform/windows/integral_types.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/tensorflow/core/protobuf/cluster.pb.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/tensorflow/core/protobuf/config.pb.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/tensorflow/core/protobuf/debug.pb.h
@@ -476,7 +471,6 @@ CMakeFiles/ops.dir/deformable_conv.cu.o
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/ThreadPool
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/Tensor.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorArgMax.h
- /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorArgMaxSycl.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorAssign.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorBase.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorBlock.h
@@ -487,11 +481,9 @@ CMakeFiles/ops.dir/deformable_conv.cu.o
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorContractionBlocking.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorContractionGpu.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorContractionMapper.h
- /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorContractionSycl.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorContractionThreadPool.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorConversion.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorConvolution.h
- /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorConvolutionSycl.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorCostModel.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorCustomOp.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorDevice.h
@@ -530,23 +522,12 @@ CMakeFiles/ops.dir/deformable_conv.cu.o
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorRandom.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorReduction.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorReductionGpu.h
- /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorReductionSycl.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorRef.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorReverse.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorScan.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorShuffling.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorStorage.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorStriding.h
- /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorSycl.h
- /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorSyclConvertToDeviceExpression.h
- /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorSyclExprConstructor.h
- /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorSyclExtractAccessor.h
- /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorSyclExtractFunctors.h
- /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorSyclFunctors.h
- /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorSyclLeafCount.h
- /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorSyclPlaceHolderExpr.h
- /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorSyclRun.h
- /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorSyclTuple.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorTrace.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorTraits.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorUInt128.h
@@ -563,7 +544,6 @@ CMakeFiles/ops.dir/deformable_conv.cu.o
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/util/CXX11Meta.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/util/CXX11Workarounds.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/util/EmulateArray.h
- /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/util/EmulateCXX11Meta.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/util/MaxSizeVector.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/SpecialFunctions
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/src/SpecialFunctions/SpecialFunctionsArrayAPI.h
@@ -714,10 +694,8 @@ CMakeFiles/ops.dir/deformable_conv.cpp.o
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/Eigen/src/Core/arch/Default/ConjHelper.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/Eigen/src/Core/arch/Default/GenericPacketMathFunctions.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/Eigen/src/Core/arch/Default/Settings.h
- /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/Eigen/src/Core/arch/GPU/Half.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/Eigen/src/Core/arch/GPU/MathFunctions.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/Eigen/src/Core/arch/GPU/PacketMath.h
- /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/Eigen/src/Core/arch/GPU/PacketMathHalf.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/Eigen/src/Core/arch/GPU/TypeCasting.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/Eigen/src/Core/arch/HIP/hcc/math_constants.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/Eigen/src/Core/arch/MSA/Complex.h
@@ -968,7 +946,6 @@ CMakeFiles/ops.dir/deformable_conv.cpp.o
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/tensorflow/core/platform/default/mutex.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/tensorflow/core/platform/default/mutex_data.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/tensorflow/core/platform/default/notification.h
- /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/tensorflow/core/platform/default/thread_annotations.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/tensorflow/core/platform/dynamic_annotations.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/tensorflow/core/platform/env.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/tensorflow/core/platform/env_time.h
@@ -989,8 +966,6 @@ CMakeFiles/ops.dir/deformable_conv.cpp.o
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/tensorflow/core/platform/thread_annotations.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/tensorflow/core/platform/tstring.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/tensorflow/core/platform/types.h
- /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/tensorflow/core/platform/windows/cpu_info.h
- /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/tensorflow/core/platform/windows/integral_types.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/tensorflow/core/protobuf/cluster.pb.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/tensorflow/core/protobuf/config.pb.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/tensorflow/core/protobuf/debug.pb.h
@@ -1015,7 +990,6 @@ CMakeFiles/ops.dir/deformable_conv.cpp.o
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/ThreadPool
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/Tensor.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorArgMax.h
- /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorArgMaxSycl.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorAssign.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorBase.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorBlock.h
@@ -1026,11 +1000,9 @@ CMakeFiles/ops.dir/deformable_conv.cpp.o
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorContractionBlocking.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorContractionGpu.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorContractionMapper.h
- /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorContractionSycl.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorContractionThreadPool.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorConversion.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorConvolution.h
- /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorConvolutionSycl.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorCostModel.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorCustomOp.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorDevice.h
@@ -1069,23 +1041,12 @@ CMakeFiles/ops.dir/deformable_conv.cpp.o
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorRandom.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorReduction.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorReductionGpu.h
- /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorReductionSycl.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorRef.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorReverse.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorScan.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorShuffling.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorStorage.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorStriding.h
- /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorSycl.h
- /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorSyclConvertToDeviceExpression.h
- /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorSyclExprConstructor.h
- /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorSyclExtractAccessor.h
- /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorSyclExtractFunctors.h
- /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorSyclFunctors.h
- /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorSyclLeafCount.h
- /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorSyclPlaceHolderExpr.h
- /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorSyclRun.h
- /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorSyclTuple.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorTrace.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorTraits.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorUInt128.h
@@ -1102,7 +1063,6 @@ CMakeFiles/ops.dir/deformable_conv.cpp.o
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/util/CXX11Meta.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/util/CXX11Workarounds.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/util/EmulateArray.h
- /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/util/EmulateCXX11Meta.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/util/MaxSizeVector.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/SpecialFunctions
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/src/SpecialFunctions/SpecialFunctionsArrayAPI.h
@@ -1256,10 +1216,8 @@ CMakeFiles/ops.dir/deformable_conv2d.cpp.o
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/Eigen/src/Core/arch/Default/ConjHelper.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/Eigen/src/Core/arch/Default/GenericPacketMathFunctions.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/Eigen/src/Core/arch/Default/Settings.h
- /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/Eigen/src/Core/arch/GPU/Half.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/Eigen/src/Core/arch/GPU/MathFunctions.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/Eigen/src/Core/arch/GPU/PacketMath.h
- /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/Eigen/src/Core/arch/GPU/PacketMathHalf.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/Eigen/src/Core/arch/GPU/TypeCasting.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/Eigen/src/Core/arch/HIP/hcc/math_constants.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/Eigen/src/Core/arch/MSA/Complex.h
@@ -1512,7 +1470,6 @@ CMakeFiles/ops.dir/deformable_conv2d.cpp.o
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/tensorflow/core/platform/default/mutex.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/tensorflow/core/platform/default/mutex_data.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/tensorflow/core/platform/default/notification.h
- /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/tensorflow/core/platform/default/thread_annotations.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/tensorflow/core/platform/dynamic_annotations.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/tensorflow/core/platform/env.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/tensorflow/core/platform/env_time.h
@@ -1533,8 +1490,6 @@ CMakeFiles/ops.dir/deformable_conv2d.cpp.o
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/tensorflow/core/platform/thread_annotations.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/tensorflow/core/platform/tstring.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/tensorflow/core/platform/types.h
- /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/tensorflow/core/platform/windows/cpu_info.h
- /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/tensorflow/core/platform/windows/integral_types.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/tensorflow/core/protobuf/cluster.pb.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/tensorflow/core/protobuf/config.pb.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/tensorflow/core/protobuf/debug.pb.h
@@ -1559,7 +1514,6 @@ CMakeFiles/ops.dir/deformable_conv2d.cpp.o
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/ThreadPool
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/Tensor.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorArgMax.h
- /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorArgMaxSycl.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorAssign.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorBase.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorBlock.h
@@ -1570,11 +1524,9 @@ CMakeFiles/ops.dir/deformable_conv2d.cpp.o
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorContractionBlocking.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorContractionGpu.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorContractionMapper.h
- /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorContractionSycl.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorContractionThreadPool.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorConversion.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorConvolution.h
- /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorConvolutionSycl.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorCostModel.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorCustomOp.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorDevice.h
@@ -1613,23 +1565,12 @@ CMakeFiles/ops.dir/deformable_conv2d.cpp.o
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorRandom.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorReduction.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorReductionGpu.h
- /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorReductionSycl.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorRef.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorReverse.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorScan.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorShuffling.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorStorage.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorStriding.h
- /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorSycl.h
- /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorSyclConvertToDeviceExpression.h
- /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorSyclExprConstructor.h
- /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorSyclExtractAccessor.h
- /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorSyclExtractFunctors.h
- /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorSyclFunctors.h
- /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorSyclLeafCount.h
- /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorSyclPlaceHolderExpr.h
- /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorSyclRun.h
- /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorSyclTuple.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorTrace.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorTraits.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/Tensor/TensorUInt128.h
@@ -1646,7 +1587,6 @@ CMakeFiles/ops.dir/deformable_conv2d.cpp.o
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/util/CXX11Meta.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/util/CXX11Workarounds.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/util/EmulateArray.h
- /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/util/EmulateCXX11Meta.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/CXX11/src/util/MaxSizeVector.h
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/SpecialFunctions
  /home/admin-seu/miniconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include/unsupported/Eigen/src/SpecialFunctions/SpecialFunctionsArrayAPI.h
